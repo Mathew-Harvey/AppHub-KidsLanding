@@ -552,7 +552,7 @@ a { text-decoration: none; color: inherit; }
 /* Parent Pricing */
 .p-pricing { padding: 80px 0; text-align: center; }
 .p-pricing-sub { font-size: 1rem; color: var(--p-muted); margin-bottom: 48px; }
-.p-pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 880px; margin: 0 auto; text-align: left; }
+.p-pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1200px; margin: 0 auto; text-align: left; }
 .p-price-card {
   background: var(--p-surface); border-radius: var(--p-radius); padding: 32px 24px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.04);
@@ -572,6 +572,8 @@ a { text-decoration: none; color: inherit; }
 .p-price-features { list-style: none; margin: 20px 0; flex: 1; }
 .p-price-features li { padding: 7px 0; font-size: 0.88rem; color: var(--p-text); display: flex; gap: 8px; align-items: center; }
 .p-price-features li::before { content: '✓'; color: var(--p-green-light); font-weight: 700; }
+.p-price-features li.is-disabled { color: var(--p-muted); opacity: 0.6; }
+.p-price-features li.is-disabled::before { content: '\2014'; color: var(--p-muted); }
 .p-price-card .p-btn { width: 100%; justify-content: center; }
 .p-pricing-footer { margin-top: 28px; font-size: 0.88rem; color: var(--p-muted); }
 @media (max-width: 768px) { .p-pricing-grid { grid-template-columns: 1fr; max-width: 380px; } }
@@ -661,8 +663,8 @@ a { text-decoration: none; color: inherit; }
         <li><a href="#k-how">How It Works</a></li>
       </ul>
       <div class="k-nav-actions">
-        <button class="k-btn-ghost">Log in</button>
-        <a href="#" class="k-btn k-btn-primary" style="padding:9px 20px; font-size:0.85rem;">Start Building</a>
+        <a href="https://app.my-app-hub.com/login" class="k-btn-ghost">Log in</a>
+        <a href="https://app.my-app-hub.com/register" class="k-btn k-btn-primary" style="padding:9px 20px; font-size:0.85rem;">Start Building</a>
       </div>
       <button class="k-hamburger" onclick="document.getElementById('kMobile').classList.toggle('open')" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -673,8 +675,8 @@ a { text-decoration: none; color: inherit; }
     <a href="#k-arcade" onclick="this.parentElement.classList.remove('open')">Arcade</a>
     <a href="#k-build" onclick="this.parentElement.classList.remove('open')">Build</a>
     <a href="#k-how" onclick="this.parentElement.classList.remove('open')">How It Works</a>
-    <a href="#" onclick="this.parentElement.classList.remove('open')">Log in</a>
-    <a href="#" class="k-btn k-btn-primary" onclick="this.parentElement.classList.remove('open')" style="text-align:center;">Start Building</a>
+    <a href="https://app.my-app-hub.com/login" onclick="this.parentElement.classList.remove('open')">Log in</a>
+    <a href="https://app.my-app-hub.com/register" class="k-btn k-btn-primary" onclick="this.parentElement.classList.remove('open')" style="text-align:center;">Start Building</a>
   </div>
 
   <!-- Kids Hero -->
@@ -685,7 +687,7 @@ a { text-decoration: none; color: inherit; }
         <h1>Make games with AI.<br>No code. Just ideas.</h1>
         <p>Describe any game you can think of. AI builds it in seconds. Share it with friends. Play what other kids made. Your ideas, your arcade.</p>
         <div class="k-hero-btns">
-          <a href="#" class="k-btn k-btn-primary">Start Building (it's free) 🚀</a>
+          <a href="https://app.my-app-hub.com/register" class="k-btn k-btn-primary">Start Building (it's free) 🚀</a>
           <a href="#k-how" class="k-btn k-btn-outline">How it works</a>
         </div>
       </div>
@@ -785,7 +787,7 @@ a { text-decoration: none; color: inherit; }
       <h2>You've got the ideas.<br>We've got the game studio.</h2>
       <p>Free account — build up to 3 games. No credit card. Just you and your imagination.</p>
       <div>
-        <a href="#" class="k-btn k-btn-primary">Create Free Account 🎮</a>
+        <a href="https://app.my-app-hub.com/register" class="k-btn k-btn-primary">Create Free Account 🎮</a>
       </div>
       <p class="k-small">Ask your parent to help you sign up. It takes 30 seconds.</p>
     </div>
@@ -796,10 +798,10 @@ a { text-decoration: none; color: inherit; }
     <div class="k-container">
       <div class="k-footer-logo">🎮 AppHub Kids</div>
       <ul class="k-footer-links">
-        <li><a href="#">Get Started</a></li>
-        <li><a href="#">Arcade</a></li>
-        <li><a href="#">How It Works</a></li>
-        <li><a href="#">Terms</a></li>
+        <li><a href="https://app.my-app-hub.com/register">Get Started</a></li>
+        <li><a href="#k-arcade">Arcade</a></li>
+        <li><a href="#k-how">How It Works</a></li>
+        <li><a href="https://app.my-app-hub.com/eua">Terms</a></li>
       </ul>
       <p class="k-footer-copy">© 2026 AppHub Kids</p>
       <p class="k-footer-tag">Built for kids. Trusted by parents.</p>
@@ -822,8 +824,8 @@ a { text-decoration: none; color: inherit; }
         <li><a href="#p-pricing">Pricing</a></li>
       </ul>
       <div class="p-nav-actions">
-        <button class="p-btn-ghost">Log in</button>
-        <a href="#" class="p-btn p-btn-primary" style="padding:9px 20px; font-size:0.85rem;">Create Account</a>
+        <a href="https://app.my-app-hub.com/login" class="p-btn-ghost">Log in</a>
+        <a href="https://app.my-app-hub.com/register" class="p-btn p-btn-primary" style="padding:9px 20px; font-size:0.85rem;">Create Account</a>
       </div>
       <button class="p-hamburger" onclick="document.getElementById('pMobile').classList.toggle('open')" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -835,8 +837,8 @@ a { text-decoration: none; color: inherit; }
     <a href="#p-how" onclick="this.parentElement.classList.remove('open')">How It Works</a>
     <a href="#p-features" onclick="this.parentElement.classList.remove('open')">Features</a>
     <a href="#p-pricing" onclick="this.parentElement.classList.remove('open')">Pricing</a>
-    <a href="#" onclick="this.parentElement.classList.remove('open')">Log in</a>
-    <a href="#" class="p-btn p-btn-primary" onclick="this.parentElement.classList.remove('open')" style="text-align:center;">Create Account</a>
+    <a href="https://app.my-app-hub.com/login" onclick="this.parentElement.classList.remove('open')">Log in</a>
+    <a href="https://app.my-app-hub.com/register" class="p-btn p-btn-primary" onclick="this.parentElement.classList.remove('open')" style="text-align:center;">Create Account</a>
   </div>
 
   <!-- Parent Hero -->
@@ -848,7 +850,7 @@ a { text-decoration: none; color: inherit; }
           <h1>Where kids learn to <em>create</em>, not just consume.</h1>
           <p>AppHub Kids lets children build their own games using AI — no coding required. They describe a game idea, AI builds it, and they share it with friends. A safe, supervised creative space.</p>
           <div class="p-hero-btns">
-            <a href="#" class="p-btn p-btn-primary">Create Free Account</a>
+            <a href="https://app.my-app-hub.com/register" class="p-btn p-btn-primary">Create Free Account</a>
             <a href="#p-safety" class="p-btn p-btn-outline">How we keep kids safe</a>
           </div>
           <div class="p-trust-bar">
@@ -1028,49 +1030,70 @@ a { text-decoration: none; color: inherit; }
     <div class="p-container">
       <div class="rv">
         <div class="p-label">Pricing</div>
-        <h2>Start free. Level up when they're ready.</h2>
-        <p class="p-pricing-sub">No credit card required. No surprise bills. Cancel anytime.</p>
+        <h2>Start free. Upgrade when you need more.</h2>
+        <p class="p-pricing-sub">No credit card required. No surprise invoices.</p>
       </div>
       <div class="p-pricing-grid rv">
         <div class="p-price-card">
           <div class="p-price-name">Free</div>
           <div class="p-price-amt">$0</div>
           <ul class="p-price-features">
-            <li>Up to 3 games</li>
-            <li>Play the whole arcade</li>
-            <li>AI game builder (basic)</li>
-            <li>Safe sharing with link</li>
-            <li>Parent dashboard</li>
+            <li>Up to 5 hosted applets</li>
+            <li>Up to 3 team members</li>
+            <li>Drag-and-drop HTML uploads</li>
+            <li>Password-protected portal</li>
+            <li class="is-disabled">Custom branding</li>
+            <li class="is-disabled">AI conversions</li>
+            <li class="is-disabled">AI applet building</li>
+            <li class="is-disabled">Priority support</li>
           </ul>
-          <a href="#" class="p-btn p-btn-outline">Start Free</a>
+          <a href="https://app.my-app-hub.com/register" class="p-btn p-btn-outline">Start Free</a>
         </div>
         <div class="p-price-card popular">
           <div class="p-pop-badge">Most Popular</div>
-          <div class="p-price-name">Explorer</div>
-          <div class="p-price-amt">$9<span>/month</span></div>
+          <div class="p-price-name">Team</div>
+          <div class="p-price-amt">$12<span>/month</span></div>
           <ul class="p-price-features">
-            <li>Up to 20 games</li>
-            <li>Unlimited AI building</li>
-            <li>Remix public games</li>
-            <li>Custom profile & avatar</li>
-            <li>Priority in arcade</li>
+            <li>Up to 50 hosted applets</li>
+            <li>Up to 15 team members</li>
+            <li>20 AI conversions / month</li>
+            <li>Custom branding</li>
+            <li>Drag-and-drop HTML uploads</li>
+            <li>Password-protected portal</li>
+            <li>Smart AI uploads</li>
+            <li class="is-disabled">AI applet building</li>
           </ul>
-          <a href="#" class="p-btn p-btn-primary">Start Exploring</a>
+          <a href="https://api.my-app-hub.com/api/subscription/checkout-landing?plan=team" class="p-btn p-btn-primary">Get Started</a>
         </div>
         <div class="p-price-card">
           <div class="p-price-name">Creator</div>
-          <div class="p-price-amt">$19<span>/month</span></div>
+          <div class="p-price-amt">$29<span>/month</span></div>
           <ul class="p-price-features">
-            <li>Unlimited games</li>
-            <li>Advanced AI features</li>
-            <li>Multiplayer building</li>
-            <li>Featured creator badge</li>
-            <li>Early access to new features</li>
+            <li>Unlimited hosted applets</li>
+            <li>Unlimited team members</li>
+            <li>100 AI conversions / month</li>
+            <li>AI applet building (500K tokens / mo)</li>
+            <li>Custom branding</li>
+            <li>Priority support</li>
+            <li>Drag-and-drop HTML uploads</li>
+            <li>Password-protected portal</li>
           </ul>
-          <a href="#" class="p-btn p-btn-primary" style="background:var(--p-green-light);color:#fff;">Go Creator</a>
+          <a href="https://api.my-app-hub.com/api/subscription/checkout-landing?plan=creator" class="p-btn p-btn-primary" style="background:var(--p-green-light);color:#fff;">Get Started</a>
+        </div>
+        <div class="p-price-card">
+          <div class="p-price-name">Pro</div>
+          <div class="p-price-amt">$79<span>/month</span></div>
+          <ul class="p-price-features">
+            <li>Everything in Creator</li>
+            <li>Unlimited AI applet building</li>
+            <li>Unlimited iterations</li>
+            <li>No token limits</li>
+            <li>Dedicated support channel</li>
+          </ul>
+          <a href="https://api.my-app-hub.com/api/subscription/checkout-landing?plan=power" class="p-btn p-btn-primary">Get Started</a>
         </div>
       </div>
-      <p class="p-pricing-footer rv">Included in every plan: Parent dashboard, safe sharing, mobile access, and no ads — ever.</p>
+      <p class="p-pricing-footer rv">Included in every plan: Prompt library, marketplace, version history, real-time collaboration, and dark mode.</p>
     </div>
   </section>
 
@@ -1080,8 +1103,8 @@ a { text-decoration: none; color: inherit; }
       <h2>Let your child build something they're proud of</h2>
       <p>Free account — up to 3 games. No credit card. You stay in control.</p>
       <div>
-        <a href="#" class="p-btn p-btn-primary">Create Free Account</a>
-        <button class="p-btn-ghost">Log in</button>
+        <a href="https://app.my-app-hub.com/register" class="p-btn p-btn-primary">Create Free Account</a>
+        <a href="https://app.my-app-hub.com/login" class="p-btn-ghost">Log in</a>
       </div>
       <p class="p-small">Free forever on the Free plan. Upgrade anytime.</p>
     </div>
@@ -1092,12 +1115,12 @@ a { text-decoration: none; color: inherit; }
     <div class="p-container">
       <div class="p-footer-logo">🎮 AppHub Kids</div>
       <ul class="p-footer-links">
-        <li><a href="#">Get Started</a></li>
-        <li><a href="#">Log in</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Safety</a></li>
-        <li><a href="#">Terms</a></li>
+        <li><a href="https://app.my-app-hub.com/register">Get Started</a></li>
+        <li><a href="https://app.my-app-hub.com/login">Log in</a></li>
+        <li><a href="#p-pricing">Pricing</a></li>
+        <li><a href="#p-features">Features</a></li>
+        <li><a href="#p-safety">Safety</a></li>
+        <li><a href="https://app.my-app-hub.com/eua">Terms</a></li>
       </ul>
       <p class="p-footer-copy">© 2026 AppHub Kids</p>
       <p class="p-footer-tag">Built for kids. Trusted by parents.</p>
